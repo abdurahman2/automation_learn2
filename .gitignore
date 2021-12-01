@@ -1,0 +1,8 @@
+*.db
+*.log
+
+!error.log
+
+/target
+/bin
+/.idea
