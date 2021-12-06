@@ -37,6 +37,6 @@ hs_err_pid*
 
 !error.log
 
-/target
-/bin
-/.idea
+target/
+bin/
+.idea/
