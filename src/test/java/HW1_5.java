@@ -32,25 +32,24 @@ Expected Output : 6,12
 //            }
 //        }
 
-        Integer[] names = { 5,6,7,12,-5,32,43,6,12, 6 };
+//        Integer[] names = { 5,6,7,12,-5,32,43,6,12 };
+//
+//        // First solution : finding duplicates using brute force method
+//        System.out.println("Finding duplicate elements in array using brute force method");
+//        for (int i = 0; i < names.length; i++) {
+//            for (int j = i + 1; j < names.length; j++) {
+//                if (names[i].equals(names[j]) ) {
+//                    // got the duplicate element
+//                    System.out.println(names[i]);
+//                }
+//            }
+//        }
 
-        // First solution : finding duplicates using brute force method
-        System.out.println("Finding duplicate elements in array using brute force method");
-        for (int i = 0; i < names.length; i++) {
-            for (int j = i + 1; j < names.length; j++) {
-                if (names[i].equals(names[j]) ) {
-                    // got the duplicate element
-                    System.out.println(names[i]);
-                }
-            }
-        }
-
-
-//        int[] my_array = {5,6,7,12,-5,32,43,6,12};
-//        for (int i = 0; i < my_array.length; i++) {
-//            for (int j = i + 1; j < my_array.length; j++) {
-//                if (my_array[i] == my_array[j])
-//                    System.out.println(my_array[j]);
+        int[] my_array = {5, 6, 7, 12, -5, 32, 43, 6, 12};
+        for (int i = 0; i < my_array.length; i++) {
+            for (int j = i + 1; j < my_array.length; j++) {
+                if (my_array[i] == my_array[j])
+                    System.out.println(my_array[j]);
 
 //                int[] my_array = {5, 6, 7, 12, -5, 32, 43, 6, 12};
 //                for (int i = 0; i < my_array.length - 1; i++) {
@@ -62,3 +61,5 @@ Expected Output : 6,12
 //                }
             }
         }
+    }
+}
