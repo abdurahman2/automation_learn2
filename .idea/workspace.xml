@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81d3e1a0-fe00-4ce9-9c01-36e0f4072294" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HW1_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HW1_5.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -65,11 +65,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/HW1_5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" selection-start-line="35" selection-end-line="40" />
+            <state relative-caret-position="578">
+              <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#364#381#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -105,8 +104,8 @@
         <option value="$PROJECT_DIR$/src/test/java/HW1_2.java" />
         <option value="$PROJECT_DIR$/src/test/java/HW1_3.java" />
         <option value="$PROJECT_DIR$/src/test/java/HW1_4.java" />
-        <option value="$PROJECT_DIR$/src/test/java/HW1_5.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/test/java/HW1_5.java" />
       </list>
     </option>
   </component>
@@ -144,11 +143,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="427" />
-    <option name="y" value="43" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="301" />
+    <option name="y" value="-971" />
     <option name="width" value="1936" />
-    <option name="height" value="982" />
+    <option name="height" value="582" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -289,10 +288,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="427" y="43" width="1936" height="982" extended-state="0" />
+    <frame x="-8" y="-1088" width="1874" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14498346" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -302,20 +301,20 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.63646054" visible="true" weight="0.13663132" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6339581" visible="true" weight="0.120456904" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49626866" weight="0.283857" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.36353946" side_tool="true" visible="true" weight="0.13663132" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.3660419" side_tool="true" visible="true" weight="0.120456904" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.47867805" weight="0.2535211" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4760128" weight="0.25206125" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.23614073" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.24421169" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -360,11 +359,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/HW1_5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="40" />
+        <state relative-caret-position="578">
+          <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#364#381#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -372,7 +370,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
         </state>
       </provider>
     </entry>
