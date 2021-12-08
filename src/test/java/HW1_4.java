@@ -13,14 +13,5 @@ Expected Output : 100
             sum = sum + my_array[i];
         }
         System.out.println(sum);
-
-
-//        System.out.println(my_array.length);
-
-
-//
-//        for(int i : my_array)
-//            sum = i;
-//        System.out.println(sum);
     }
 }
