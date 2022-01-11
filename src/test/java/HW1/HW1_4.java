@@ -1,3 +1,5 @@
+package HW1;
+
 public class HW1_4 {
     /*
 4.	Write a Java program to sum values of an array.

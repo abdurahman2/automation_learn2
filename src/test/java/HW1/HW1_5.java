@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Iterator;
+package HW1;
 
 public class HW1_5 {
     /*
