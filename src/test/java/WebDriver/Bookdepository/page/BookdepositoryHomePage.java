@@ -26,16 +26,16 @@ public class BookdepositoryHomePage {
     @FindBy(xpath = "//img[@alt='Bookdepository.com']")
     private WebElement logo;
 
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/ul[2]/li[3]/a")
+    @FindBy(xpath = "//*[@class='icon-user']")
     private WebElement signInRegisterButton;
 
-    @FindBy(xpath = "/html/body/div[2]/div[1]/div/ul[2]/li[3]/a/i")
+    @FindBy(xpath = "//*[@class='home-icon-link']")
     private WebElement icon;
 
-    @FindBy(xpath = "//*[@id=\"book-search-form\"]/div[1]/input[1]")
+    @FindBy(xpath = "//*[@name='searchTerm']")
     private WebElement searchField;
 
-    @FindBy(xpath = "/html/body/div[2]/div[4]/div/ul/li[1]/a[1]")
+    @FindBy(xpath = "//*[@class='page-links mobile-nav-content']")
     private WebElement navigationMenu;
 
     @FindBy(xpath = "//img[@alt='Books on Screen']")
@@ -82,19 +82,15 @@ public class BookdepositoryHomePage {
         return searchButton.isDisplayed();
     }
 
-    public BookdepositorySearchResultsPage searchBook(String name) {
+    public SearchResultsPage searchBook(String name) {
         searchField.click();
         searchField.sendKeys("java");
         searchButton.click();
-        return new BookdepositorySearchResultsPage(driver);
+        return new SearchResultsPage(driver);
+    }
+
+    public String getLogoName(){
+        openPage();
+        return logo.getAccessibleName();
     }
 }
-
-//    WebElement logo = driver.findElement(By.xpath("/html/body/div[2]/div[2]/header/div[2]/div[1]/h1/a"));
-//    WebElement signInRegister = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/ul[2]/li[3]/a"));
-//    WebElement icon = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/ul[2]/li[3]/a/i"));
-//    WebElement searchField = driver.findElement(By.xpath("//*[@id=\"book-search-form\"]/div[1]/input[1]"));
-//    WebElement navigationMenu = driver.findElement(By.xpath("/html/body/div[2]/div[4]/div/ul/li[1]/a[1]"));
-//    WebElement banner = driver.findElement(By.xpath("//img[@alt='Books on Screen']"));
-//    WebElement searchButton = driver.findElement(By.xpath("//span[@class='text']"));
-//    WebElement searchButtonMob = driver.findElement(By.xpath("//button[@aria-label='Search']"));

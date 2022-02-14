@@ -1,19 +1,19 @@
 package WebDriver.Bookdepository.test;
 
 import WebDriver.Bookdepository.page.BookdepositoryHomePage;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 public class BookdepositoryHomePageTest {
 
     private WebDriver driver;
 
-    @BeforeMethod(alwaysRun = true)
+    @Before
     public void browserSetup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -29,36 +29,68 @@ public class BookdepositoryHomePageTest {
     }
 
     @Test
+    public void iconIsVisible() {
+        boolean iconIsVisible = new BookdepositoryHomePage(driver)
+                .openPage()
+                .presentIcon();
+        Assert.assertTrue(iconIsVisible);
+    }
+
+    @Test
+    public void searchFieldIsVisible() {
+        boolean searchFieldIsVisible = new BookdepositoryHomePage(driver)
+                .openPage()
+                .presentSearchField();
+        Assert.assertTrue(searchFieldIsVisible);
+    }
+
+    @Test
+    public void navigationMenuIsVisible() {
+        boolean navigationMenuIsVisible = new BookdepositoryHomePage(driver)
+                .openPage()
+                .presentNavigationMenu();
+        Assert.assertTrue(navigationMenuIsVisible);
+    }
+
+    @Test
+    public void bannerIsVisible() {
+        boolean bannerIsVisible = new BookdepositoryHomePage(driver)
+                .openPage()
+                .presentNavigationMenu();
+        Assert.assertTrue(bannerIsVisible);
+    }
+
+    @Test
+    public void searchButtonIsVisible() {
+        boolean searchButtonIsVisible = new BookdepositoryHomePage(driver)
+                .openPage()
+                .presentNavigationMenu();
+        Assert.assertTrue(searchButtonIsVisible);
+    }
+
+    @Test
     @DisplayName("Search book")
     public void searchBook() {
         int expectedSearchResultNumber = new BookdepositoryHomePage(driver)
                 .openPage()
                 .searchBook("java")
                 .countGeneralSearchResult();
-        Assert.assertTrue(expectedSearchResultNumber > 0, "Book with a title containing the search phrase is not present");
+        Assert.assertTrue("Book with a title containing the search phrase is not present", expectedSearchResultNumber > 0);
     }
 
-    @AfterMethod(alwaysRun = true)
+    @Test
+    @DisplayName("Check logo name")
+    public void checkLogoName() {
+        String logoName = new BookdepositoryHomePage(driver)
+                .openPage()
+                .getLogoName();
+        Assert.assertEquals(logoName, "Bookdepository.com");
+    }
+
+    @After
     public void browserClose() {
         driver.quit();
         driver = null;
     }
 }
-
-
-//        searchField.click();
-//        searchField.sendKeys("java");
-//        searchButtonMob.click();
-//        addToCartButton.click();
-//        bookItem.click();
-
-
-//        Assert.assertTrue(logo.isDisplayed(), "Logo is empty");
-//        Assert.assertTrue(signInRegister.isDisplayed(), "SignInRegister is empty");
-//        Assert.assertTrue(icon.isDisplayed(), "Icon is empty");
-//        Assert.assertTrue(searchField.isDisplayed(), "SearchField is empty");
-//        Assert.assertTrue(navigationMenu.isDisplayed(), "NavigationMenu is empty");
-//        Assert.assertTrue(banner.isDisplayed(), "Banner is empty");
-//        Assert.assertTrue(searchButton.isEnabled(), "SearchButton is empty");
-//        Assert.assertTrue(searchButtonMob.isDisplayed(), "SearchButtonMob is empty");
 

@@ -10,23 +10,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class BookdepositorySearchResultsPage {
+public class SearchResultsPage {
 
-    public final WebDriver driver;
+    private final WebDriver driver;
 
-    public BookdepositorySearchResultsPage(WebDriver driver) {
+    public SearchResultsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@data-price='45.34']")
+    @FindBy(xpath = "//*[@data-isbn='9780321356680']")
     private WebElement addToBasketButtonPrice45;
-
-    @FindBy(xpath = "//div[@class='main-content search-page']//div[2]//div[1]//a[1]//img[1]")
-    private WebElement linkOnProduct9780321356680;
 
     @FindBy(xpath = " descendant-or-self::*[contains(@content,'java')]")
     private List<WebElement> generalSearchResult;
+
+    @FindBy(xpath = "//*[@data-lazy='https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3213/9780321356680.jpg']")
+    private WebElement goToBookDetailPage;
 
     @FindBy(xpath = "//span[@data-item-count]")
     private WebElement itemCountInBasket;
@@ -34,19 +34,30 @@ public class BookdepositorySearchResultsPage {
     @FindBy(xpath = "//div[@class='modal-header']//h3")
     private WebElement modalWindowTitle;
 
+    @FindBy(xpath = "//h1")
+    private WebElement bookName;
+
     public int countGeneralSearchResult() {
         return generalSearchResult.size();
     }
 
-    public BookdepositoryProductPage navigateToBookPage() {
+    public ProductPage navigateToBookPage() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(linkOnProduct9780321356680));
-        linkOnProduct9780321356680.click();
-        return new BookdepositoryProductPage(driver);
+                .until(ExpectedConditions.elementToBeClickable(addToBasketButtonPrice45));
+        addToBasketButtonPrice45.click();
+        return new ProductPage(driver);
     }
 
-    public BookdepositorySearchResultsPage addBook45ToBasket() {
-        new BookdepositoryHomePage(driver).openPage()
+    public ProductPage openDetailBookPage() {
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOf(goToBookDetailPage));
+        goToBookDetailPage.click();
+        return new ProductPage(driver);
+    }
+
+    public SearchResultsPage addBook45ToBasket() {
+        new BookdepositoryHomePage(driver)
+                .openPage()
                 .searchBook("java")
                 .addToBasketButtonPrice45.click();
         return this;
